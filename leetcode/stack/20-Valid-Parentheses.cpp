@@ -20,7 +20,6 @@ public:
                     return false;
                 }
                 st.pop();
-
             }
         }
         return st.empty();
