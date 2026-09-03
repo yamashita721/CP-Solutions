@@ -1,19 +1,27 @@
 class Solution {
 public:
     bool uniformArray(vector<int>& nums1) {
-        int m=nums1[0];
-        bool has=false;
-        for(int v: nums1){
-            if(v<m){
-                m=v;
-            }
-            if(v&1){
-                has=true;
-            }
+        int mini=INT_MAX;
+        for(auto x:nums1){
+            mini=min(mini,x);
         }
-        if(m&1){
+        if(mini%2!=0){
             return true;
         }
-        return !has;
+        else{
+            bool even=true;
+            for(auto p:nums1){
+                if(p%2!=0){
+                    even=false;
+                    break;
+                }
+            }
+            if(even){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
     }
 };
