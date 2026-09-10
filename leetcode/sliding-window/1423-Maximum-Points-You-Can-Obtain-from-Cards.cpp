@@ -12,9 +12,9 @@ public:
         while(left>=0){
             sum -=cardPoints[left];
             sum +=cardPoints[right];
-             ans=max(ans,sum);
             left--;
             right--;
+            ans=max(sum,ans);
         }
         return ans;
     }
