@@ -10,10 +10,10 @@ public:
         return false;
     }
     string longestPalindrome(string s) {
+        int n=s.size();
         int start=0;
         int maxi=INT_MIN;
-        int n=s.size();
-        for(int i=0;i<s.size();i++){
+        for(int i=0;i<n;i++){
             for(int j=i;j<n;j++){
                 if(solve(s,i,j)){
                     if(j-i+1>maxi){
