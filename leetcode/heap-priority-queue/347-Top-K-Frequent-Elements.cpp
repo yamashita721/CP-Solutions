@@ -14,6 +14,5 @@ public:
             ans.push_back(v[i].first);
         }
         return ans;
-        
     }
 };
