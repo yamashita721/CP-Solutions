@@ -2,9 +2,9 @@ class Solution {
 public:
     int lengthOfLongestSubstring(string s) {
         unordered_set<char> m;
-        int n=s.size();
         int left=0;
         int maxi=0;
+        int n=s.size();
         for(int i=0;i<n;i++){
             while(m.count(s[i])){
                 m.erase(s[left]);
