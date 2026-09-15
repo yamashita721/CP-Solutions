@@ -8,19 +8,18 @@ int main() {
       int n,k;
       cin>>n>>k;
       vector<int> v(n);
+
       for(int i=0;i<n;i++){
           cin>>v[i];
       }
-      vector<int> a=v;
+            vector<int> g=v;
+      
       sort(v.begin(),v.end());
-      if(v==a){
-          cout<<"YES"<<endl;
-      }
-      else if(k>1){
-          cout<<"YES"<<endl;
+      if(n!=1 && k==1 && v!=g){
+          cout<<"NO"<<endl;
       }
       else{
-          cout<<"NO"<<endl;
+          cout<<"YES"<<endl;
       }
   }
   return 0;
